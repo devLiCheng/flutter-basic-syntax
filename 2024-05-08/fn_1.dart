@@ -25,6 +25,16 @@ class Person {
 
 
 
+// 高阶函数
+List<int> printLengths(List<String> sts, int Function(String s) f){
+  List<int> list = [];
+  for(String s in sts){
+    list.add(f(s));
+  }
+  return list;
+}
+
+
 void main() {
 
   int add(int a, int b){
@@ -72,6 +82,16 @@ p2.sayHello();
 
 
 
+int? getStr(){
+  int k = 5;
+  return k;
+}
+
+print(getStr());
+
+
+List<int> res = printLengths(["hello", "world!"], (String s) => s.length);
+print('res: $res');
 
 
 
