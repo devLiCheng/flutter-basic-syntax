@@ -88,5 +88,14 @@ print(myDog is Animal);
 
 
 
+int a = 5;
+try {
+  double c = a as double;
+  print("c: $c");
+} catch(e){
+  print("Error: $e");
+}
+double b = a.toDouble();
+print(""" $a $b """);
 
 } 
