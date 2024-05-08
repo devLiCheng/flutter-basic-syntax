@@ -1,0 +1,12 @@
+name: 'flutter_basic_syntax'
+version: 1.0.0
+description: A new Flutter project.
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0 <3.0.0"
+
+
+dependencies:
+  http: ^1.2.1
+  
