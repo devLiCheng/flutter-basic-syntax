@@ -34,4 +34,15 @@ void main() async {
 
   await fetchGithubData();
 
+  int getInt(int i, int j){
+    return i + j;
+  }
+
+  int fetchInt(int g){
+    return g;
+  }
+
+  getInt(fetchInt(8),  fetchInt(5));
+
 }
+
