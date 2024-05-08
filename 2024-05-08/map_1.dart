@@ -1,3 +1,4 @@
+
 void main() {
   Map m = {};
   print(m);
@@ -16,4 +17,15 @@ void main() {
   List<double> list_2 = numbers.map((num) => num.toDouble()).toList();
   print(list_2 is List<double>);
   print(list_2);
+
+  
+  print("----------------------------------");
+  Iterator<int> iterator_list = [1,5,8].iterator;
+  while(iterator_list.moveNext()){
+    print(iterator_list.current);
+    print(iterator_list.runtimeType);
+    print(iterator_list.toString());
+  }
+
+  
 }
