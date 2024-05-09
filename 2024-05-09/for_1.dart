@@ -45,4 +45,30 @@ void main() {
   }
 
 
+var command = 'PENDING';
+String res = '';
+switch (command) {
+  case 'CLOSED':
+    res = 'CLOSED';
+    break;
+  case 'PENDING':
+      res = 'PENDING';
+      break;
+  case 'APPROVED':
+      res = 'APPROVED';
+      break;
+  case 'DENIED':
+     res = 'DENIED';
+     break;
+  case 'OPEN':
+     res = 'OPEN';
+     break;
+  default:
+     res = '';
+     break;
+}
+print('res: $res');
+
+
+
 }
