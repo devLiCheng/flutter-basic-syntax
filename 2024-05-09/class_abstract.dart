@@ -12,7 +12,7 @@ class Rectangle  extends Shape{
 
   @override
   double area() {
-    return width * height;
+    return this.width * this.height;
   }
 
   @override
@@ -22,8 +22,23 @@ class Rectangle  extends Shape{
 }
 
 
+class Person{
+  String name;
+  int age;
+  Person({ required this.name, required this.age });
+  void introduce(){
+    print('$name $age');
+  }
+}
+
+
 void main(){
     Rectangle rect = Rectangle(5, 10);
     print("Area of Rectangle is: ${rect.area()}");
     print("Perimeter of Rectangle is: ${rect.perimeter()}");  
+
+
+    Person person = Person(name: "John", age: 25);
+    person.introduce();
+
 }
