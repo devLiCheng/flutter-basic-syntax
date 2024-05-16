@@ -1,0 +1,23 @@
+Future 和 Stream 类是 Dart 异步编程的核心。
+
+Future 表示一个不会立即完成的计算过程。与普通函数直接返回结果不同的是异步函数返回一个将会包含结果的 Future。该 Future 会在结果准备好时通知调用者。
+
+Stream 是一系列异步事件的序列。其类似于一个异步的 Iterable，不同的是当你向 Iterable 获取下一个事件时它会立即给你，但是 Stream 则不会立即给你而是在它准备好时告诉你。
+
+接收 Stream 事件
+#
+Stream 可以通过许多方式创建，这个话题我们会在另一篇文章详述，而这些所有的创建方式都可以相同的方式在代码中使用：像使用 for 循环 迭代一个 Iterable 一样，我们可以使用 异步 for 循环 （通常我们直接称之为 await for）来迭代 Stream 中的事件。例如：
+
+Future<int> sumStream(Stream<int> stream) async {
+  var sum = 0;
+  await for (final value in stream) {
+    sum += value;
+  }
+  return sum;
+}
+content_copy
+该代码只是简单地接收整型事件流中的每一个事件并将它们相加，然后返回（被 Future 包裹）相加后的整型值。当循环体结束时，函数会暂停直到下一个事件到达或 Stream 完成。
+
+内部使用 await for 循环的函数需要使用 async 关键字标记。
+
+下面的示例中使用了 async* 函数生成一个简单的整型 Stream 来测试上一个代码片段：
