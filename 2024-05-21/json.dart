@@ -48,4 +48,11 @@ void main(){
   // print('u3 $u3'); // {"name":"zhangsan","age":25}
   
 
+ List<String> stringList = [];
+ List<Object> list = stringList;
+
+ print(stringList);
+ print(list);
+
+
 }
