@@ -48,11 +48,18 @@ void main(){
   // print('u3 $u3'); // {"name":"zhangsan","age":25}
   
 
- List<String> stringList = [];
+ List<String> stringList = ['a'];
  List<Object> list = stringList;
 
  print(stringList);
  print(list);
+
+
+Comparable<String> stringComparable = "hello";
+Comparable<Object> comparable = stringComparable;
+
+print('comparable : `${comparable.compareTo("obj")}`');
+
 
 
 }
