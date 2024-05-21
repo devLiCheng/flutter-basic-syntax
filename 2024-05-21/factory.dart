@@ -26,6 +26,8 @@ class PhoneFactory {
   }  
 }  
   
+
+  
 void main() {  
   test(); // 确保调用了 test 方法  
 }  
